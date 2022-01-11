@@ -23,6 +23,17 @@
                     <li>
                         <a href="{{route('contact')}}">Contact</a>
                     </li>
+                    <li>
+                        <a href="{{route('dashboard')}}">Dashboard</a>
+                    </li>
+
+                    <li>
+                        <a href="{{route('blog.create')}}">blogForm</a>
+                    </li>
+
+                    <li>
+                        <a href="{{route('portfolio.create')}}">PortfolioForm</a>
+                    </li>
                 </ul><!-- /.navbar-nav -->
             </div><!-- /.navbar-collapse -->
 
