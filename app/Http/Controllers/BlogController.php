@@ -9,9 +9,16 @@ class BlogController extends Controller
 {
     public function index()
     {
-       return view("pages.blog");
+    //    $blogs = Blog::all();
+    //    return view("pages.blog");
+    //    return view("pages.blog",compact("blogs"));
+
+    $blogs = Blog::all();
+    return view("pages.blog",compact("blogs"));
+
     }
 
+    // return la page formulaire de blog
     public function create()
     {
         return view("admin.blog.create");

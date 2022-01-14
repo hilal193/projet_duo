@@ -45,16 +45,17 @@ use App\Http\Controllers\PortfolioController;
 
     // admin
     Route::get('/admin/dashboard', [FrontController::class,"dashboard"])->name('dashboard');
+
+
+
     Route::get('/admin/blog', [BlogController::class,"index"])->name('blog.index');
-    Route::get('/admin/portfolio', [BlogController::class,"index"])->name('portfolio.index');
-
-
-
     Route::get('/admin/blog/create', [BlogController::class,"create"])->name('blog.create');
-    Route::get('/admin/blog/portfolio', [PortfolioController::class,"create"])->name('portfolio.create');
+    Route::post('/admin/blog/store', [BlogController::class,"store"])->name('blog.store');
 
-    Route::post('/admin/blog/create', [BlogController::class,"store"])->name('blog.store');
-    Route::post('/admin/blog/portfolio', [PortfolioController::class,"store"])->name('portfolio.store');
+
+    Route::get('/admin/portfolio', [PortfolioController::class,"index"])->name('portfolio.index');
+    Route::get('/admin/portfolio/create', [PortfolioController::class,"create"])->name('portfolio.create');
+    Route::post('/admin/portfolio/store', [PortfolioController::class,"store"])->name('portfolio.store');
 
 
 

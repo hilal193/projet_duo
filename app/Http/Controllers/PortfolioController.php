@@ -9,8 +9,11 @@ class PortfolioController extends Controller
 {
         public function index()
         {
-           return view("pages.portfolio");
+           $portfolios = Portfolio::all();
+           return view("pages.portfolio",compact('portfolios'));
         }
+
+        // return la page formulaire de portfolio
         public function create()
         {
             return view("admin.portfolio.create");
@@ -18,12 +21,10 @@ class PortfolioController extends Controller
         public function store(Request $request)
         {
             // dd($request);
-            $hilal = new Portfolio();
-            $hilal->titre = $request->titre;
-            $hilal->description = $request->description;
-            $hilal->save();
-            return redirect()->route('home');
-
-
+            $portfolio = new Portfolio();
+            $portfolio->titre = $request->titre;
+            $portfolio->description = $request->description;
+            $portfolio->save();
+            return redirect()->route('portfolio.index');
         }
 }

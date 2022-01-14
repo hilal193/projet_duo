@@ -23,7 +23,7 @@
                     <li>
                         <a href="{{route('contact')}}">Contact</a>
                     </li>
-                    <li>
+                    {{-- <li>
                         <a href="{{route('dashboard')}}">Dashboard</a>
                     </li>
 
@@ -33,7 +33,7 @@
 
                     <li>
                         <a href="{{route('portfolio.create')}}">PortfolioForm</a>
-                    </li>
+                    </li> --}}
                 </ul><!-- /.navbar-nav -->
             </div><!-- /.navbar-collapse -->
 
