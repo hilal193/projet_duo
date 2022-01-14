@@ -23,6 +23,10 @@
                     <li>
                         <a href="{{route('contact')}}">Contact</a>
                     </li>
+
+                    <li>
+                        <a href="{{route('dashboard')}}">Dashboard</a>
+                    </li>
                     {{-- <li>
                         <a href="{{route('dashboard')}}">Dashboard</a>
                     </li>

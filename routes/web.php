@@ -5,6 +5,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PortfolioController;
 
 /*
@@ -45,7 +46,7 @@ use App\Http\Controllers\PortfolioController;
 
     // admin
     Route::get('/admin/dashboard', [FrontController::class,"dashboard"])->name('dashboard');
-
+    Route::get('/dashboard',[DashboardController::class,"index"])->name(('dashboard'));
 
 
     Route::get('/admin/blog', [BlogController::class,"index"])->name('blog.index');
