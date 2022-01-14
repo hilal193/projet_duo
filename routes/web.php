@@ -59,6 +59,10 @@ use App\Http\Controllers\PortfolioController;
     Route::post('/admin/portfolio/store', [PortfolioController::class,"store"])->name('portfolio.store');
 
 
+    // delete
+    Route::delete('/blog/{id}/deleteblog', [BlogController::class,"destroy"])->name("blog.destroy");
+    Route::delete('/portfolio/{id}/deleteportfolio', [PortfolioController::class,"destroy"])->name("portfolio.destroy");
+
 
 
 

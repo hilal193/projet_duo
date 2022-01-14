@@ -34,4 +34,9 @@ class BlogController extends Controller
          $zafar->save();
          return redirect()->route('home');
     }
+    public function destroy(Blog $id)
+    {
+        $id->delete();
+        return redirect()->back();
+    }
 }

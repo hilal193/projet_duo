@@ -79,8 +79,7 @@
                               <td>Lorem</td>
                               <td>Lorem</td>
                               <td>
-                                  {{-- <button class="btn btn-danger">Delete</button> --}}
-                                  <button type="button" class="btn rouge">Delete</button>
+                                  <button type="submit" class="btn rouge">Delete</button>
                               </td>
                           </tr>
                       </tbody>
@@ -107,10 +106,15 @@
                             <td>{{ $item->titre }}</td>
                             <td><img src="{{ $item->image }}" style="height:50px; width:50px;" alt=""></td>
                             <td>{{ $item->description }}</td>
+
+                            <form action="{{ route("blog.destroy", $item->id) }}" method="POST">
+                                @csrf
+                            @method('DELETE')
                             <td>
-                                {{-- <button class="btn btn-danger">Delete</button> --}}
-                                <button type="button" class="btn rouge">Delete</button>
+                                <button type="submit" class="btn rouge">Delete</button>
                             </td>
+                            </form>
+
                         </tr>
 
                         @empty
@@ -121,8 +125,7 @@
                             <td>Vide</td>
                             <td>Vide</td>
                             <td>
-                                {{-- <button class="btn btn-danger">Delete</button> --}}
-                                <button type="button" class="btn rouge">Delete</button>
+                                <button type="submit" class="btn rouge">Delete</button>
                             </td>
                         </tr>
                         @endforelse
@@ -148,10 +151,13 @@
                             <td>{{ $item->id }}</td>
                             <td>{{ $item->titre }}</td>
                             <td>{{ $item->description }}</td>
+                            <form action="{{ route("portfolio.destroy", $item->id) }}" method="POST">
+                                @csrf
+                            @method("DELETE")
                             <td>
-                                {{-- <button class="btn btn-danger">Delete</button> --}}
-                                <button type="button" class="btn rouge">Delete</button>
+                                <button type="submit" class="btn rouge">Delete</button>
                             </td>
+                            </form>
                         </tr>
                         @empty
                         <tr>
@@ -161,8 +167,7 @@
                             <td>vide</td>
                             <td>vide</td>
                             <td>
-                                {{-- <button class="btn btn-danger">Delete</button> --}}
-                                <button type="button" class="btn rouge">Delete</button>
+                                <button type="submit" class="btn rouge">Delete</button>
                             </td>
                         </tr>
 

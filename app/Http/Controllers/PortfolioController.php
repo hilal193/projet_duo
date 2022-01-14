@@ -27,4 +27,9 @@ class PortfolioController extends Controller
             $portfolio->save();
             return redirect()->route('portfolio.index');
         }
+        public function destroy(Portfolio $id)
+        {
+            $id->delete();
+            return redirect()->back();
+        }
 }

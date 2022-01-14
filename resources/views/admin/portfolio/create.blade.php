@@ -1,4 +1,5 @@
-@extends('layouts.index')
+{{-- @extends('layouts.index') --}}
+@extends('layouts.back')
 
 @section('content')
 
