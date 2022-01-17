@@ -80,6 +80,7 @@
                               <td>Lorem</td>
                               <td>
                                   <button type="submit" class="btn rouge">Delete</button>
+                                  <button type="submit" class="btn rouge">Show</button>
                               </td>
                           </tr>
                       </tbody>
@@ -107,11 +108,15 @@
                             <td><img src="{{ $item->image }}" style="height:50px; width:50px;" alt=""></td>
                             <td>{{ $item->description }}</td>
 
+                            <td>
+                            <a href="{{route('blog.show', $item->id)}}" class="btn btn-success">Show</a>
+
                             <form action="{{ route("blog.destroy", $item->id) }}" method="POST">
                                 @csrf
                             @method('DELETE')
-                            <td>
                                 <button type="submit" class="btn rouge">Delete</button>
+                                {{-- <button type="submit" class="btn rouge">Show</button> --}}
+
                             </td>
                             </form>
 
@@ -126,6 +131,7 @@
                             <td>Vide</td>
                             <td>
                                 <button type="submit" class="btn rouge">Delete</button>
+                                {{-- <button type="submit" class="btn rouge">show</button> --}}
                             </td>
                         </tr>
                         @endforelse
@@ -151,11 +157,13 @@
                             <td>{{ $item->id }}</td>
                             <td>{{ $item->titre }}</td>
                             <td>{{ $item->description }}</td>
+                            <td>
+                            <a href="{{route('portfolio.show', $item->id)}}" class="btn btn-success">Show</a>
                             <form action="{{ route("portfolio.destroy", $item->id) }}" method="POST">
                                 @csrf
                             @method("DELETE")
-                            <td>
                                 <button type="submit" class="btn rouge">Delete</button>
+                                {{-- <button type="submit" class="btn rouge">show</button> --}}
                             </td>
                             </form>
                         </tr>

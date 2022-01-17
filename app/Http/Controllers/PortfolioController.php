@@ -32,4 +32,9 @@ class PortfolioController extends Controller
             $id->delete();
             return redirect()->back();
         }
+        public function show(Portfolio $portfolio)
+        {
+            return view("admin.portfolio.show",compact("portfolio"));
+            // dd($portfolio);
+        }
 }

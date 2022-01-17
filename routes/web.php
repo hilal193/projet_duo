@@ -63,7 +63,9 @@ use App\Http\Controllers\PortfolioController;
     Route::delete('/blog/{id}/deleteblog', [BlogController::class,"destroy"])->name("blog.destroy");
     Route::delete('/portfolio/{id}/deleteportfolio', [PortfolioController::class,"destroy"])->name("portfolio.destroy");
 
-
+    //show
+    Route::get('/blog/{blog}/showblog', [BlogController::class,"show"])->name("blog.show");
+    Route::get('/portfolio/{portfolio}/showportfolio', [PortfolioController::class,"show"])->name("portfolio.show");
 
 
 
