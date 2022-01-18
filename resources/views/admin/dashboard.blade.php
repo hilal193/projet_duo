@@ -108,9 +108,9 @@
                             <td>{{ $item->titre }}</td>
                             <td><img src="{{ $item->image }}" style="height:50px; width:50px;" alt=""></td>
                             <td>{{ $item->description }}</td>
-                            <td>
+                            <td  class="df">
                             <a href="{{route('blog.show', $item->id)}}" class="btn btn vert">Show</a>
-                            <a href="{{route('blog.edit', $item->id)}}" class="btn btn orange">Edit</a>
+                            <a href="{{route('blog.edit', $item->id)}}" class="btn btn orange edit">Edit</a>
                             <form action="{{ route("blog.destroy", $item->id) }}" method="POST">
                                 @csrf
                             @method('DELETE')
@@ -157,9 +157,9 @@
                             <td>{{ $item->id }}</td>
                             <td>{{ $item->titre }}</td>
                             <td>{{ $item->description }}</td>
-                            <td>
+                            <td  class="df">
                             <a href="{{route('portfolio.show', $item->id)}}" class="btn btn vert">Show</a>
-                            <a href="{{route('portfolio.edit', $item->id)}}" class="btn btn orange">Edit</a>
+                            <a href="{{route('portfolio.edit', $item->id)}}" class="btn btn orange edit">Edit</a>
                             <form action="{{ route("portfolio.destroy", $item->id) }}" method="POST">
                                 @csrf
                             @method("DELETE")

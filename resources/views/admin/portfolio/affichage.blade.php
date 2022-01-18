@@ -78,9 +78,9 @@
                             <td>{{ $item->id }}</td>
                             <td>{{ $item->titre }}</td>
                             <td>{{ $item->description }}</td>
-                            <td>
+                            <td class="df">
                             <a href="{{route('portfolio.show', $item->id)}}" class="btn btn vert">Show</a>
-                            <a href="{{route('portfolio.edit', $item->id)}}" class="btn btn orange">Edit</a>
+                            <a href="{{route('portfolio.edit', $item->id)}}" class="btn btn orange edit">Edit</a>
                             <form action="{{ route("portfolio.destroy", $item->id) }}" method="POST">
                                 @csrf
                             @method("DELETE")
