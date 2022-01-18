@@ -107,17 +107,13 @@
                             <td>{{ $item->titre }}</td>
                             <td><img src="{{ $item->image }}" style="height:50px; width:50px;" alt=""></td>
                             <td>{{ $item->description }}</td>
-
                             <td>
                             <a href="{{route('blog.show', $item->id)}}" class="btn btn-success">Show</a>
                             <a href="{{route('blog.edit', $item->id)}}" class="btn btn-success">Edit</a>
                             <form action="{{ route("blog.destroy", $item->id) }}" method="POST">
                                 @csrf
                             @method('DELETE')
-                                <button type="submit" class="btn rouge">Delete</button>
-                                {{-- <button type="submit" class="btn rouge">Show</button> --}}
-
-                            </td>
+                                <button type="submit" class="btn rouge">Delete</button>                            </td>
                             </form>
 
                         </tr>
