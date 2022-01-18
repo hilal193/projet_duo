@@ -67,8 +67,8 @@
                               <th>TITRE</th>
                               <th>IMAGE</th>
                               <th>DESCRIPTION</th>
-                              <th>Affiche</th>
-                              <th>action</th>
+                              <th>AFFICHE</th>
+                              <th>ACTION</th>
                           </tr>
                       </thead>
                       <tbody>
@@ -98,7 +98,7 @@
                               <th>TITRE</th>
                               <th>IMAGE</th>
                               <th>DESCRIPTION</th>
-                              <th>action</th>
+                              <th>ACTION</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -148,7 +148,7 @@
                             <th>#id</th>
                             <th>TITRE</th>
                             <th>DESCRIPTION</th>
-                            <th>action</th>
+                            <th>ACTION</th>
                         </tr>
                     </thead>
                     <tbody>
