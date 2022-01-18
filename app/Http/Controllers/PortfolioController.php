@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Portfolio;
+use Blog;
 use Illuminate\Http\Request;
 
 class PortfolioController extends Controller
@@ -36,5 +37,23 @@ class PortfolioController extends Controller
         {
             return view("admin.portfolio.show",compact("portfolio"));
             // dd($portfolio);
+        }
+        public function edit(Portfolio $portfolio)
+        {
+            return view("admin.portfolio.edit",compact("portfolio"));
+        }
+        public function update(Portfolio $portfolio, Request $request)
+        {
+            // dump($portfolio);
+            // dd($request);
+            $portfolio -> titre = $request->titre;
+            $portfolio -> description = $request->description;
+            $portfolio -> save();
+            return redirect()->back();
+        }
+        public function affichage()
+        {
+            $affichePortfolio = Portfolio::all();
+            return view("admin.portfolio.affichage",compact("affichePortfolio"));
         }
 }

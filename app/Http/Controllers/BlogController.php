@@ -44,4 +44,25 @@ class BlogController extends Controller
         // dd($blog);
         return view("admin.blog.show",compact("blog"));
     }
+    public function edit(Blog $blog)
+    {
+        return view("admin.blog.edit",compact("blog"));
+    }
+    public function update(Request $request, Blog $blog)
+    {
+        // dump($blog);
+        // dd($request);
+        $blog -> image = $request->image;
+        $blog -> titre = $request->titre;
+        $blog -> description = $request->description;
+        $blog->save();
+        return redirect()->back();
+
+
+    }
+    public function affichage()
+    {
+        $afficheBlog = Blog::all();
+        return view("admin.blog.affichage",compact("afficheBlog"));
+    }
 }

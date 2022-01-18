@@ -12,7 +12,7 @@
     <div class="card-body">
       <h5 class="card-title">{{ $portfolio->titre }} </h5>
       <p class="card-text">{{ $portfolio->description }}</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <a href="{{ route("dashboard") }}" class="btn btn-primary">ADMIN</a>
     </div>
   </div>
 @endsection

@@ -67,6 +67,17 @@ use App\Http\Controllers\PortfolioController;
     Route::get('/blog/{blog}/showblog', [BlogController::class,"show"])->name("blog.show");
     Route::get('/portfolio/{portfolio}/showportfolio', [PortfolioController::class,"show"])->name("portfolio.show");
 
+    //Edit
+    Route::get('/blog/{blog}/edit', [BlogController::class,"edit"])->name("blog.edit");
+    Route::get('/portfolio/{portfolio}/edit', [PortfolioController::class,"edit"])->name("portfolio.edit");
 
 
+    // update
+    Route::put('/blog/{blog}/update', [BlogController::class,"update"])->name("blog.update");
+    Route::put('/portfolio/{portfolio}/update', [PortfolioController::class,"update"])->name("portfolio.update");
+
+
+    // affichage blog/portfolio : admin
+    Route::get('/admin/blog/affichage', [BlogController::class,"affichage"])->name('blog.affichage');
+    Route::get('/admin/portfolio/affichage', [PortfolioController::class,"affichage"])->name('portfolio.affichage');
 
