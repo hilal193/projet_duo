@@ -80,7 +80,8 @@
                               <td>Lorem</td>
                               <td>
                                   <button type="submit" class="btn rouge">Delete</button>
-                                  <button type="submit" class="btn rouge">Show</button>
+                                  <button type="submit" class="btn vert">Show</button>
+                                  <button type="submit" class="btn orange">Edit</button>
                               </td>
                           </tr>
                       </tbody>
@@ -108,12 +109,15 @@
                             <td><img src="{{ $item->image }}" style="height:50px; width:50px;" alt=""></td>
                             <td>{{ $item->description }}</td>
                             <td>
-                            <a href="{{route('blog.show', $item->id)}}" class="btn btn-success">Show</a>
-                            <a href="{{route('blog.edit', $item->id)}}" class="btn btn-success">Edit</a>
+                            <a href="{{route('blog.show', $item->id)}}" class="btn btn vert">Show</a>
+                            <a href="{{route('blog.edit', $item->id)}}" class="btn btn orange">Edit</a>
                             <form action="{{ route("blog.destroy", $item->id) }}" method="POST">
                                 @csrf
                             @method('DELETE')
-                                <button type="submit" class="btn rouge">Delete</button>                            </td>
+                                <button type="submit" class="btn rouge">Delete</button>
+                                {{-- <button type="submit" class="btn vert">Show</button>
+                                <button type="submit" class="btn orange">Edit</button> --}}
+                              </td>
                             </form>
 
                         </tr>
@@ -154,8 +158,8 @@
                             <td>{{ $item->titre }}</td>
                             <td>{{ $item->description }}</td>
                             <td>
-                            <a href="{{route('portfolio.show', $item->id)}}" class="btn btn-success">Show</a>
-                            <a href="{{route('portfolio.edit', $item->id)}}" class="btn btn-success">Edit</a>
+                            <a href="{{route('portfolio.show', $item->id)}}" class="btn btn vert">Show</a>
+                            <a href="{{route('portfolio.edit', $item->id)}}" class="btn btn orange">Edit</a>
                             <form action="{{ route("portfolio.destroy", $item->id) }}" method="POST">
                                 @csrf
                             @method("DELETE")

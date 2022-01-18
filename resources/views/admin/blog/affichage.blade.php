@@ -80,8 +80,8 @@
                             <td>{{ $item->description }}</td>
 
                             <td>
-                            <a href="{{route('blog.show', $item->id)}}" class="btn btn-success">Show</a>
-                            <a href="{{route('blog.edit', $item->id)}}" class="btn btn-success">Edit</a>
+                            <a href="{{route('blog.show', $item->id)}}" class="btn btn vert">Show</a>
+                            <a href="{{route('blog.edit', $item->id)}}" class="btn btn orange">Edit</a>
                             <form action="{{ route("blog.destroy", $item->id) }}" method="POST">
                                 @csrf
                             @method('DELETE')
