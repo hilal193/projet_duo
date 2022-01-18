@@ -2170,5 +2170,21 @@ a.post-title:hover,
  }
 
  .showw{
-   margin-left: 30%;
+   margin-left: 40%;
+ }
+
+ .carte-dash{
+   display: flex;
+ }
+
+ .carte-dash2{
+   margin: 2%;
+ }
+
+ .porto{
+   color: greenyellow;
+ }
+
+ .blogs{
+   color: firebrick;
  }
