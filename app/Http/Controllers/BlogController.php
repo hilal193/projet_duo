@@ -32,7 +32,7 @@ class BlogController extends Controller
          $zafar->titre = $request->titre;
          $zafar->description = $request->description;
          $zafar->save();
-         return redirect()->route('home');
+         return redirect()->route('blog.index');
     }
     public function destroy(Blog $id)
     {
