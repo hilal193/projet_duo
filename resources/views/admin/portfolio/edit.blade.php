@@ -11,6 +11,10 @@
     @csrf
     @method("PUT")
     <div class="mb-3">
+        <label class="form-label">Image</label>
+        <input type="text" value="{{ $portfolio->image }}" name="image" class="form-control">
+    </div>
+    <div class="mb-3">
         <label  class="form-label">Titre</label>
         <input type="text" value="{{ $portfolio->titre }}"  name="titre" class="form-control" >
     </div>

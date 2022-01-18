@@ -68,6 +68,7 @@
                         <tr class="table-info">
                             <th>#id</th>
                             <th>TITRE</th>
+                            <th>IMAGE</th>
                             <th>DESCRIPTION</th>
                             <th>action</th>
                         </tr>
@@ -76,6 +77,7 @@
                         @forelse ($affichePortfolio as $item)
                         <tr>
                             <td>{{ $item->id }}</td>
+                            <td><img src="{{ $item->image }}" style="height:50px; width:50px;" alt=""></td>
                             <td>{{ $item->titre }}</td>
                             <td>{{ $item->description }}</td>
                             <td class="df">

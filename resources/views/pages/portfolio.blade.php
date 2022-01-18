@@ -16,7 +16,8 @@
                 @forelse ($portfolios as $item)
                 <div class="col-lg-fifth col-md-3 col-sm-4 col-xs-6" data-groups='["uiux"]'>
                     <a class="portfolio-link" href="#">
-                        <img src={{ asset("img/portfolio-1.jpg") }} alt="" class="img-carousel">
+                        {{-- <img src={{ asset("img/portfolio-1.jpg") }} alt="" class="img-carousel"> --}}
+                        <img src={{$item->image }} alt="" class="img-carousel">
                         <div class="portfolio-info">
                             <div class="portfolio-info-top">
                                 {{-- <h3>Business Perfect item</h3> --}}

@@ -24,6 +24,7 @@ class PortfolioController extends Controller
             // dd($request);
             $portfolio = new Portfolio();
             $portfolio->titre = $request->titre;
+            $portfolio->image = $request->image;
             $portfolio->description = $request->description;
             $portfolio->save();
             return redirect()->route('portfolio.index');
@@ -47,6 +48,7 @@ class PortfolioController extends Controller
             // dump($portfolio);
             // dd($request);
             $portfolio -> titre = $request->titre;
+            $portfolio -> image = $request->image;
             $portfolio -> description = $request->description;
             $portfolio -> save();
             return redirect()->back();

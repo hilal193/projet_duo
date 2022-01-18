@@ -147,6 +147,7 @@
                         <tr class="table-info">
                             <th>#id</th>
                             <th>TITRE</th>
+                            <th>IMAGE</th>
                             <th>DESCRIPTION</th>
                             <th>ACTION</th>
                         </tr>
@@ -156,6 +157,7 @@
                         <tr>
                             <td>{{ $item->id }}</td>
                             <td>{{ $item->titre }}</td>
+                            <td><img src="{{ $item->image }}" style="height:50px; width:50px;" alt=""></td>
                             <td>{{ $item->description }}</td>
                             <td  class="df">
                             <a href="{{route('portfolio.show', $item->id)}}" class="btn btn vert">Show</a>
