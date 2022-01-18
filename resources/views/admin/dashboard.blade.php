@@ -52,8 +52,32 @@
         </li>
     </ul>
 </div>
-<div>
+<div class="content-container">
+  <div>
     <h2 class="sub-header">Dashboard</h2>
+  </div>
+    <div class="carte-dash">
+        <div class="carte-dash2">
+            <div class="card showw bg-success" style="width: 35rem !important;">
+                <img src="" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title :"> Titre : Blog</h5>
+                    <p class="card-text :"> Nombre d'éléments : <span class="porto">{{ count($affichePortfolio) }} </span></p>
+                    {{-- <a href="{{ route("dashboard") }}" class="btn btn noir">RETURN TO ADMIN</a> --}}
+                </div>
+            </div>
+        </div>
+        <div class="carte-dash2">
+            <div class="card showw bg-info" style="width: 35rem !important;">
+                <img src="" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title :"> Titre : Portfolio</h5>
+                    <p class="card-text :"> Nombre d'éléments : <span class="blogs">{{ count($afficheBlog) }}</span> </p>
+                    {{-- <a href="{{ route("dashboard") }}" class="btn btn noir">RETURN TO ADMIN</a> --}}
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 {{-- <div class="content-container"> --}}
 
