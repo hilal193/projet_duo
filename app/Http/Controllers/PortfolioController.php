@@ -12,7 +12,7 @@ class PortfolioController extends Controller
         {
            $portfolios = Portfolio::all();
            return view("pages.portfolio",compact('portfolios'));
-        
+
         }
 
         // return la page formulaire de portfolio
@@ -59,6 +59,6 @@ class PortfolioController extends Controller
             $affichePortfolio = Portfolio::all();
             // $portfoliosTotal = Portfolio::all();
 
-            return view("admin.portfolio.affichage",compact("affichePortfolio","portfoliosTotal"));
+            return view("admin.portfolio.affichage",compact("affichePortfolio"));
         }
 }
