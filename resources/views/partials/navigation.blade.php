@@ -13,7 +13,8 @@
             <div class="main-menu" id="perfect-navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active">
-                        <a href="{{route('home')}}">Home</a></li>
+                        <a href="{{route('home')}}">Home</a>
+                    </li>
                     <li>
                         <a href="{{route('blog')}}">Blog </a>
                     </li>

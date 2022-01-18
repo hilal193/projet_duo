@@ -16,7 +16,7 @@ class CreateBlogsTable extends Migration
         Schema::create('blogs', function (Blueprint $table) {
             $table->id();
             $table->string("titre",30);
-            $table->string("image",100)->nullable();
+            $table->string("image",200)->nullable();
             $table->longText("description");
             $table->timestamps();
         });

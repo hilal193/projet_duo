@@ -7,9 +7,9 @@
         <div class="container">
             <h1 class="section-title-big text-center">Portfolio</h1>
         </div>
-        <div class="text-center">
+        {{-- <div class="text-center">
             <a href="{{route('portfolio.create')}}">PortfolioForm</a>
-        </div>
+        </div> --}}
 
         <div class="container-fluid">
             <div class="row" id="grid">
